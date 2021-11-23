@@ -6,6 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import GradientBoostingRegressor
 from config import db_password
+import random
 
 def predict(hometype, hasgarage, 
 yearbuilt, zipcode, lotsizesqft, livingareasqft, 
@@ -80,17 +81,27 @@ def getJsonData():
        'avgschoolrating', 'avgschoolsize', 'medianstudentsperteacher']]
    
     feature = []
-    for rows in [0,1,2,3,4,5,6,7,8,9]:
+    for row in random.choices(Housing_data.index, k=500):
         feature.append({
         "type":"Feature",
         "properties":{
-            "city":Housing_data.loc[rows,'city'],
+            "streetaddress":Housing_data.loc[row,'streetaddress'],
+            "city":Housing_data.loc[row,'city'],
+            "zipcode":int(Housing_data.loc[row,'zipcode']),
+            "lotsizesqft":int(Housing_data.loc[row,'lotsizesqft']),
+            "livingareasqft":int(Housing_data.loc[row,'livingareasqft']),
+            "hometype":Housing_data.loc[row,'hometype'],
+            "numofbedrooms":int(Housing_data.loc[row,'numofbedrooms']),
+            "numofbathrooms":float(Housing_data.loc[row,'numofbathrooms']),
+            "numofstories":int(Housing_data.loc[row,'numofstories']),
+            "latestprice":'${0:,.0f}'.format(int(Housing_data.loc[row,'latestprice']))
+            },
             "geometry":{
                 "type":"Point",
-                "coordinates":[Housing_data.loc[rows,'longitude'],Housing_data.loc[rows,'latitude']]}}})
+                "coordinates":[Housing_data.loc[row,'longitude'],Housing_data.loc[row,'latitude']]}})
     
     data = {"type":"FeatureCollection","features":feature}
-    with open('result.json', 'w') as fp:
+    with open('static/result.json', 'w') as fp:
         json.dump(data, fp)
 
 
