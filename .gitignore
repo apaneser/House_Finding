@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 Notebook/config.py
 config.py
+static/js/config.js

@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from run_ml import predict
+from run_ml import getJsonData
 
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
@@ -30,5 +31,11 @@ def prediction():
         print(prediction)
         return render_template("results.html", results=prediction)
 
+@app.route('/map')
+def map():
+    getJsonData()
+    return render_template("map.html")
+    
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
