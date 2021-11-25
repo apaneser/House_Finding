@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+Notebook/config.py
+config.py
+static/js/config.js
