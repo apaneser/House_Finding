@@ -7,7 +7,7 @@ The User will be asked to input housing features and click submit, which will se
 Ajaypal Paneser (Solo)  
 
 ## Youtube Video
-No Video yet
+https://www.youtube.com/watch?v=j_DazBmM_Uc
 
 ## Dataset Used
 https://www.kaggle.com/ericpierce/austinhousingprices/tasks?taskId=4044
