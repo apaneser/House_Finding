@@ -84,7 +84,36 @@ numofbathrooms, numofbedrooms, numofstories, avgschooldistance):
 I used HTML and Javascript along with Flask in python to create the dashboard for this project. I put 3 tabs as part of the UI: Home, Map, and Stats. The home tab is where the main inputs are located for the machin Learning Algorithm. The map section uses mapbox to display some of the homes with their information when you click on them. the stats tab contains visualizations created in tableau.
 
 ### Home  
+This is where the user posts all the information:
 ![Home](Images/HOME.png)
 
+### Predicting
+I've used the request method from flask to get the entered data in the form from the home page and put each value into a variable to use with the function for the machine learning algorithm. the prediction results are sent to results.html which displays the data
 
+``` python
+@app.route('/predict',methods=['POST'])
+def prediction():
+    # Get the data from the POST request.
+    if request.method == "POST":
+        print('valuecheck: ' + request.form["home-type"])
+        hometype = int(request.form["home-type"])
+        hasgarage = int(request.form["hasgarage"])
+        yearbuilt = int(request.form["yearbuilt"])
+        zipcode = int(request.form["zipcode"])
+        lotsizesqft = request.form["lotsizesqft"]
+        livingareasqft = int(request.form["livingareasqft"])
+        numofbathrooms = float(request.form["numofbathrooms"])
+        numofbedrooms = int(request.form["numofbedrooms"])
+        numofstories = int(request.form["numofstories"])
+        avgschooldistance = int(request.form["avgschooldistance"])
 
+        prediction = '${0:,.0f}'.format(predict(hometype, hasgarage, yearbuilt, zipcode, lotsizesqft, 
+        livingareasqft, numofbathrooms, numofbedrooms, numofstories, avgschooldistance)[0])
+
+        print(prediction)
+        return render_template("results.html", results=prediction)
+```
+
+### Results
+This is the result screen, with the results of the inputs shown above displayed below:  
+![Results](Images/RESULTS.png)
