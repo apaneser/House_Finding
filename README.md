@@ -14,7 +14,7 @@ I used postgresql/PGAdmin for the database. The Databasae was split into 4 table
 ![PGADMIN](Images/PGADMIN.png)
 
 ## Machin Learning Algorithm
-For the machine learning algorithm
+For the machine learning algorithm, I used Gradient Boosting Regressor to calculate the House prices from the inputs. The columns from the database I used are hometype, hasgarage, yearbuilt, zipcode, latest_saleyear, lotsizesqft, livingareasqft, numofbathrooms, numofbedrooms, numofstories, avgschooldistance. All non-numerical values were converted to nnumerical and some unnecessary data was cleaned. I was able to get a 73% accuracy score, though the accuracy tended to fluctuate from 60%-70% via other random states. 
 
 ``` python
 def predict(hometype, hasgarage, 
@@ -76,3 +76,5 @@ numofbathrooms, numofbedrooms, numofstories, avgschooldistance):
 
     return result
 ```
+
+
