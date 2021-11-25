@@ -35,6 +35,10 @@ def prediction():
 def map():
     getJsonData()
     return render_template("map.html")
+
+@app.route('/stats')
+def stats():
+    return render_template("stats.html")
     
 
 if __name__ == "__main__":
