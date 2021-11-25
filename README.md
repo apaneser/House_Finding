@@ -125,7 +125,7 @@ The map displays a random 500 homes with information about the home with prices 
 
 ### Stats
 This page shows visualizations made via tableau that show how much certain values affect the price of a home and also some things that may not have been necessary
-~[Stats](Images/STATS.png)
+![Stats](Images/STATS.png)
 
 ## Things I would have wanted to add
 * After receiving the results, I would have wanted to display similar homes to what the user searched for on the map. due to not having enough time, I wasn't able to work on this and ended up showing random homes on the map
