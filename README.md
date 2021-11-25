@@ -117,3 +117,8 @@ def prediction():
 ### Results
 This is the result screen, with the results of the inputs shown above displayed below:  
 ![Results](Images/RESULTS.png)
+
+
+### Map
+The map displays a random 500 homes with information about the home with prices when you click on them
+![Map](Images/MAP.png)
