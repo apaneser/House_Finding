@@ -1,19 +1,14 @@
-# House_Finding  
+# Austin House Prices
 
 ## Summary  
-the user will be asked to input housing features such as price, lot size, bedroom count, etc and a map will be displayed that fits within those inputs. there will also be an option to check places that have been in that range 5 years ago and also to use machine learning to find houses that may or may not fit that criteria in the future. the area covered depends on the dataset chosen.
+The User will be asked to input housing features and click submit, which will send all the data through a machine learning algorithm to get the resulting housing price. The dashboard also includes a tab to display a map where houses can be selected to look at their features and prices. Another tab includes stats where graphs and plots can be viewed.
 
 ## Members  
 Ajaypal Paneser (Solo)  
 
-## possible data
-https://www.kaggle.com/tianhwu/brooklynhomes2003to2017?select=brooklyn_sales_map.csv  
-* +has a large amount of data that has prices for 14 years  
-* +may be great for maching learning  
-* -is not current  
+## Dataset Used
+https://www.kaggle.com/ericpierce/austinhousingprices/tasks?taskId=4044
 
-
-
-## alternative project using similar concept
-the user inputs their data such as age, income, etc and the machine learning algorithm finds what kind of home would fit them  
-possible dataset to use on this project: https://www.kaggle.com/camnugent/california-housing-prices
+## Database
+I used postgresql/PGAdmin for the database. The Databasae was split into 4 tables: house_features, house_info, house_location, house_school. 
+![PGADMIN](images/PGADMIN.png)
