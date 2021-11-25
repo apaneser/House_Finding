@@ -10,5 +10,5 @@ Ajaypal Paneser (Solo)
 https://www.kaggle.com/ericpierce/austinhousingprices/tasks?taskId=4044
 
 ## Database
-I used postgresql/PGAdmin for the database. The Databasae was split into 4 tables: house_features, house_info, house_location, house_school. 
-![PGADMIN](images/PGADMIN.png)
+I used postgresql/PGAdmin for the database. The Databasae was split into 4 tables: house_features, house_info, house_location, house_school.  
+![PGADMIN](Images/PGADMIN.png)
