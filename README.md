@@ -6,6 +6,9 @@ The User will be asked to input housing features and click submit, which will se
 ## Members  
 Ajaypal Paneser (Solo)  
 
+## Youtube Video
+No Video yet
+
 ## Dataset Used
 https://www.kaggle.com/ericpierce/austinhousingprices/tasks?taskId=4044
 
@@ -76,5 +79,12 @@ numofbathrooms, numofbedrooms, numofstories, avgschooldistance):
 
     return result
 ```
+
+## Dashboard
+I used HTML and Javascript along with Flask in python to create the dashboard for this project. I put 3 tabs as part of the UI: Home, Map, and Stats. The home tab is where the main inputs are located for the machin Learning Algorithm. The map section uses mapbox to display some of the homes with their information when you click on them. the stats tab contains visualizations created in tableau.
+
+### Home  
+![Home](Images/HOME.png)
+
 
 
